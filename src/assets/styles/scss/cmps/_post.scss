@@ -1,0 +1,24 @@
+.post {
+    max-width: 500px;
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .post-header {
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+
+        h3 {
+            margin: 0;
+        }
+
+        .avatar {
+            margin-inline-end: 10px;
+        }
+    }
+
+}
