@@ -199,7 +199,7 @@ a:hover {
 
 .app {
   background-color: #fafafa;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 button {
@@ -229,23 +229,50 @@ form > * {
   transform: scale(1.1);
 }
 
+.modal .css-1wnsr1i {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+.modal .sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modal .sign-up .css-q0jhri-MuiInputBase-root-MuiInput-root {
+  width: 100%;
+}
+
 .app-header {
   background-color: #fff;
   padding: 20px;
   border-bottom: 1px solid lightgray;
   position: sticky;
+  justify-content: space-between;
 }
 .app-header img {
   object-fit: contain;
 }
+.app-header .user h4 {
+  margin: 0;
+}
 
 .post {
   max-width: 500px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  margin-block-end: 45px;
 }
 .post img {
   width: 100%;
   height: 200px;
   object-fit: contain;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 }
 .post .post-header {
   display: flex;
