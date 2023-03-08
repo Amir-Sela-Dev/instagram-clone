@@ -4,7 +4,8 @@ import { db, auth } from "../firebase";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { Button, Input } from "@mui/material";
-
+import { ImgUploader } from "../cmps/imgUploader";
+import { InstagramEmbed } from 'react-social-media-embed';
 
 export function InstagramIndex({ handleClose, open, setOpen, user, setUser, openSignIn, setOpenSignIn }) {
     const [posts, setPosts] = useState([])
@@ -78,10 +79,22 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
 
     return (
         <div className="instagram-index">
-            {
-                posts.map(({ post, id }) => <Post key={id} username={post.username} caption={post.caption} imgUrl={post.imgUrl} />
-                )
-            }
+            <div className="post-list">
+
+                <div className="lefr-posts">
+                    {
+                        posts.map(({ post, id }) => <Post key={id} user={user} postId={id} username={post.username} caption={post.caption} imgUrl={post.imgUrl} />
+                        )
+                    }
+                </div>
+
+                <div className="right-posts">
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <InstagramEmbed url="https://www.instagram.com/p/CUbHfhpswxt/" width={328} />
+                    </div>
+
+                </div>
+            </div>
 
 
             <Modal
@@ -153,6 +166,10 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
 
                 </Box>
             </Modal>
+
+            {user ? <ImgUploader username={user.multiFactor.user.displayName} />
+                : <h3>Login to upload</h3>
+            }
 
         </div>
     )

@@ -1,0 +1,12 @@
+.img-uploader {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-inline: auto;
+  margin-block: 10px;
+}
+.img-uploader progress {
+  width: 100%;
+}
+
+/*# sourceMappingURL=img-uploader.css.map */

@@ -27,4 +27,40 @@
         }
     }
 
+    h4 {
+        padding-inline: 10px;
+        margin-bottom: 0;
+
+
+    }
+
+    .comment {
+        padding-inline: 10px;
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+
+
+    form {
+        margin-top: 10px;
+
+        input {
+            flex: 1;
+            height: 25px;
+            border: none;
+            padding: 10px;
+            border-top: 1px solid lightgray;
+        }
+
+        .button {
+            flex: 0;
+            height: 25px;
+            border-top: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+            border-radius: 0;
+            color: #6082a3;
+            background-color: transparent;
+        }
+    }
+
 }

@@ -11,7 +11,7 @@ export function MainHeader({ handleOpen, user, setOpenSignIn }) {
                     <Button onClick={handleOpen}>Sign up</Button>
                     <Button onClick={() => setOpenSignIn(true)}>Sign in</Button>
                 </div>}
-                {user && <div className="user">
+                {user && <div className="user flex align-center">
                     <h4>{user.multiFactor.user.displayName}</h4>
                     <Button onClick={() => auth.signOut()}>Logout</Button>
                 </div>}

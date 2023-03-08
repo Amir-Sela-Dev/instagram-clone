@@ -1,0 +1,11 @@
+.img-uploader {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-inline: auto;
+    margin-block: 10px;
+
+    progress {
+        width: 100%;
+    }
+}
