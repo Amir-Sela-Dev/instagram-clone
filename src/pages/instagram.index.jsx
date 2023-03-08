@@ -9,7 +9,7 @@ import { InstagramEmbed } from 'react-social-media-embed';
 
 export function InstagramIndex({ handleClose, open, setOpen, user, setUser, openSignIn, setOpenSignIn }) {
     const [posts, setPosts] = useState([])
-    const [username, setUsername] = useState('');
+    const [username, setUsername] = useState('aaa');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -53,11 +53,6 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
     function signIn(ev) {
         ev.preventDefault()
         auth.signInWithEmailAndPassword(email, password)
-            .then(authUser => {
-                return authUser.user.updateProfile({
-                    displayName: username
-                })
-            })
             .catch(err => alert(err.message))
 
         setOpenSignIn(false)
@@ -90,7 +85,10 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
 
                 <div className="right-posts">
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <InstagramEmbed url="https://www.instagram.com/p/CUbHfhpswxt/" width={328} />
+                        <InstagramEmbed url="https://www.instagram.com/p/CpTeDXpMCHl/" width={328} />
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <InstagramEmbed url="https://www.instagram.com/p/Cot5huFgu7s/" width={328} />
                     </div>
 
                 </div>
@@ -104,7 +102,7 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
             >
                 <Box sx={style}>
 
-                    <h2>Instagram</h2>
+                    <img src="https://res.cloudinary.com/dp3tok7wg/image/upload/v1678286839/svg_xml_base64_PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtbGFiZWw9Ikluc3RhZ3JhbSIgY2xhc3M9Il9hYjYtIiBjb2xvcj0icmdiKDM4LCAzOCwgMzgpIiBmaWxsPSJyZ2IoMzgsIDM4LCAzOCkiIGhlaWdodD0iMjkiIHJvbGU9ImltZyIgdml_ctovds.svg" alt="" />
 
                     <form className="sign-up" >
 
@@ -142,7 +140,7 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
             >
                 <Box sx={style}>
 
-                    <h2>Instagram</h2>
+                    <img src="https://res.cloudinary.com/dp3tok7wg/image/upload/v1678286839/svg_xml_base64_PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtbGFiZWw9Ikluc3RhZ3JhbSIgY2xhc3M9Il9hYjYtIiBjb2xvcj0icmdiKDM4LCAzOCwgMzgpIiBmaWxsPSJyZ2IoMzgsIDM4LCAzOCkiIGhlaWdodD0iMjkiIHJvbGU9ImltZyIgdml_ctovds.svg" alt="" />
 
                     <form className="sign-up" >
 
@@ -167,7 +165,7 @@ export function InstagramIndex({ handleClose, open, setOpen, user, setUser, open
                 </Box>
             </Modal>
 
-            {user ? <ImgUploader username={user.multiFactor.user.displayName} />
+            {user ? <ImgUploader username={user.multiFactor.user.displayName} user={user} />
                 : <h3>Login to upload</h3>
             }
 

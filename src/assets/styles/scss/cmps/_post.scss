@@ -4,19 +4,24 @@
     border: 1px solid lightgray;
     margin-block-end: 45px;
 
+    @include for-wide-layout {
+        width: 500px;
+
+    }
+
     img {
         width: 100%;
         height: 200px;
         object-fit: contain;
         border-top: 1px solid lightgray;
         border-bottom: 1px solid lightgray;
-
     }
 
     .post-header {
         display: flex;
         align-items: center;
-        padding: 20px 10px;
+        padding: 10px 10px;
+        font-size: 12px;
 
         h3 {
             margin: 0;
@@ -24,19 +29,42 @@
 
         .avatar {
             margin-inline-end: 10px;
+            width: 35px;
+            height: 35px;
         }
     }
 
     h4 {
         padding-inline: 10px;
         margin-bottom: 0;
+        font-weight: 100;
 
 
     }
 
+    h5 {
+        padding-inline: 10px;
+        color: #8e8e8e;
+        margin-block: 8px;
+    }
+
+    .icons {
+        align-items: center;
+        padding-inline: 10px;
+        margin-block: 10px;
+
+        img {
+            width: 24px;
+            height: 24px;
+            border: none;
+            margin-right: 10px;
+
+        }
+    }
+
     .comment {
         padding-inline: 10px;
-        padding-top: 10px;
+        padding-top: 5px;
         margin-bottom: 0;
     }
 
@@ -46,7 +74,7 @@
 
         input {
             flex: 1;
-            height: 25px;
+            height: 35px;
             border: none;
             padding: 10px;
             border-top: 1px solid lightgray;
@@ -54,7 +82,7 @@
 
         .button {
             flex: 0;
-            height: 25px;
+            height: 35px;
             border-top: 1px solid lightgray;
             border-left: 1px solid lightgray;
             border-radius: 0;

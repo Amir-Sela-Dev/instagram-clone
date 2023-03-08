@@ -1,31 +1,19 @@
-.instagram-index {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-}
-.instagram-index .post-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 13 | /         @include for-normal-layout {
+ * 14 | |             flex-direction: row;
+ * 15 | | 
+ * 16 | \         }
+ *    '
+ *   src\assets\styles\scss\pages\instagram-index.scss 13:9  root stylesheet */
 
-.modal .css-1wnsr1i {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 22px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 13 \2502  \250c          @include for-normal-layout {\a 14 \2502  \2502              flex-direction: row;\a 15 \2502  \2502  \a 16 \2502  \2514          }\a    \2575 \a   src\\assets\\styles\\scss\\pages\\instagram-index.scss 13:9  root stylesheet";
 }
-.modal .sign-up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.modal .sign-up .css-q0jhri-MuiInputBase-root-MuiInput-root {
-  width: 100%;
-}
-
-/*# sourceMappingURL=instagram-index.css.map */

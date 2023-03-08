@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 import { storage, db, firebase } from "../firebase";
 
-export function ImgUploader({ username }) {
+export function ImgUploader({ username, user }) {
     const [caption, setCaption] = useState('')
     const [progress, setProgress] = useState(0)
     const [img, setImg] = useState('')
@@ -15,7 +15,6 @@ export function ImgUploader({ username }) {
 
     function handleUpload() {
         const uploadTask = storage.ref(`images/${img.name}`).put(img)
-        console.log(uploadTask);
         uploadTask.on(
             "state_changed",
             (snapshot) => {
@@ -39,7 +38,8 @@ export function ImgUploader({ username }) {
                             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                             caption: caption,
                             imgUrl: url,
-                            username: username
+                            username: username || user._delegate.email
+
                         })
 
                         setProgress(0)

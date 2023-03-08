@@ -5,7 +5,7 @@ export function MainHeader({ handleOpen, user, setOpenSignIn }) {
     return (
         <header>
             <div className="app-header flex align-center">
-                <div className="image">Instagram</div>
+                <img src="https://res.cloudinary.com/dp3tok7wg/image/upload/v1678286839/svg_xml_base64_PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtbGFiZWw9Ikluc3RhZ3JhbSIgY2xhc3M9Il9hYjYtIiBjb2xvcj0icmdiKDM4LCAzOCwgMzgpIiBmaWxsPSJyZ2IoMzgsIDM4LCAzOCkiIGhlaWdodD0iMjkiIHJvbGU9ImltZyIgdml_ctovds.svg" alt="" />
 
                 {!user && <div className="flex">
                     <Button onClick={handleOpen}>Sign up</Button>
