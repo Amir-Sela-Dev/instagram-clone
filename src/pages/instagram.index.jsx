@@ -9,7 +9,7 @@ import { InstagramEmbed } from 'react-social-media-embed';
 
 export function InstagramIndex({ handleClose, open, setOpen, user, setUser, openSignIn, setOpenSignIn }) {
     const [posts, setPosts] = useState([])
-    const [username, setUsername] = useState('aaa');
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
